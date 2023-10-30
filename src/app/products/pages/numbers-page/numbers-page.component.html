@@ -1,1 +1,53 @@
-<p>numbers-page works!</p>
+<p-panel header="Pipes Numericos" class="p-1">
+
+  <p>Pipes incluidos en Angular-- Usualmente en el common Module </p>
+
+</p-panel>
+
+<div class="grid">
+
+
+  <div class="col-12 md:col-4">
+
+    <p-card header="venta" subheader="ventas del año en curso ">
+      <p>decimalPipe:</p>
+      <p>dato | number:'1.2-2'</p>
+      {{ (totalSells + 1235) | number:'1.2-2' }}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Ventas Brutas" subheader="del presente año  ">
+      <p>currencyPipe:</p>
+      <p>dato | currency:'USD':"symbol-narrow"</p>
+      {{ (totalSells * 4) | currency:'USD':"symbol-narrow" }}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Ventas Brutas" subheader="del presente año  ">
+      <p>currencyPipe:</p>
+      <p>dato | currency:"USD":"symbol-narrow"</p>
+      {{ (totalSells * 1) | currency:'USD':"symbol-narrow" }}
+    </p-card>
+
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Ventas Brutas" subheader="del presente año  ">
+      <p>currencyPipe:</p>
+      <p>dato | currency:'USD':"symbol-narrow":"1.4-4"</p>
+      {{ (totalSells * 1) | currency:'USD':"symbol-narrow":"1.4-4" }}
+    </p-card>
+  </div>
+
+  <div class="col-12 md:col-4">
+    <p-card header="Ganancia porcentual" subheader="del presente año  ">
+      <p>currencyPipe:</p>
+      <p>dato |  percent</p>
+      {{ porcent | percent }}
+    </p-card>
+  </div>
+
+
+</div>
